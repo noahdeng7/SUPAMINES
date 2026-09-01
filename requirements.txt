@@ -1,0 +1,6 @@
+filelock==3.17.0
+labml==0.4.161
+labml-app==0.0.102
+numpy==1.26.4
+setuptools==75.8.0
+torch==2.6.0
