@@ -18,9 +18,6 @@ python supamines.py distill
 python supamines.py train my_run
 python supamines.py evaluate models/distilled_checkpoint.pt
 python supamines.py evaluate models/distilled_checkpoint.pt 1000
-python supamines.py frontier plan
-python supamines.py frontier run
-python supamines.py frontier collect
 python supamines.py play models/distilled_checkpoint.pt
 ```
 
@@ -31,14 +28,10 @@ collects the pace-survival sweep. `play` starts the FCEUX model server.
 
 ## Repository
 
-| Path | Purpose |
-| --- | --- |
-| `training_env/` | C++ Tetris environment and Python bindings |
-| `distillation/` | BetaTetris teacher and DAgger distillation |
-| `RL/` | models and constrained PPO training |
-| `tools/` | evaluation, frontier sweeps, and ONNX export |
-| `demo/` | FCEUX live-play server |
-| `models/` | local checkpoints |
-| `slurm/` | optional cluster jobs |
+`training_env/` C++ Tetris environment and Python bindings
+`distillation/` BetaTetris teacher and DAgger distillation
+`RL/` models and constrained PPO training
+`demo/` FCEUX live-play
+`models/` actual model weights
 
 The training objective is score before 230 lines subject to a maximum topout probability.
